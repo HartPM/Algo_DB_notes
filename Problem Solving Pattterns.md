@@ -117,7 +117,7 @@
     - Solution (binary search):
         - pick a middle point in the given array. If this value is less than n, throw out the latter half of the array and search just the first half (or vice versa). Continue on this pattern until n is found or return -1 if n is not in the array.
         - Time: O(Log(n))
-        
+
         function search(arr, val) {
             let min = 0;
             let max = arr.length - 1;
