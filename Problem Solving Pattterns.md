@@ -11,14 +11,15 @@
             }
             let frequencyCounter1 = {}
             let frequencyCounter2 = {}
+
             for(let val of arr1){
                 frequencyCounter1[val] = (frequencyCounter1[val] || 0) + 1
             }
+
             for(let val of arr2){
                 frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1        
             }
-            console.log(frequencyCounter1);
-            console.log(frequencyCounter2);
+
             for(let key in frequencyCounter1){
                 if(!(key ** 2 in frequencyCounter2)){
                     return false
@@ -60,7 +61,12 @@
 
 
 - Multiple Pointers
-    -Ex:
+    - Used on array, string, or linked list. 
+    - Usually looking for a pair of values that match each other
+    - Uses two pointers or variables (i, j) that correspond to indices, working across an array in a direction to compare the two pointers.
+    - Often useful with sorted arrays or strings.
+
+    -Ex_1:
         Implement a function called countUniqueValues, which accepts a sorted array, and counts the unique values in the array. There can be negative numbers in the array, but it will always be sorted.
 
     - Solution:
@@ -95,8 +101,8 @@
 
     - Solution:
         function isSubsequence(str1, str2) {
-            var i = 0;
-            var j = 0;
+            let i = 0;
+            let j = 0;
             if (!str1) return true;
             while (j < str2.length) {
                 if (str2[j] === str1[i]) i++;
@@ -112,7 +118,7 @@
     - Array doesn't have to be sorted.
     - Time: O(n)
 
-    - Ex:
+    - Ex_1:
         - Write a function called maxSubArraySum which accepts an array of integers and a number called n. The function should calculate the maximum sum of n consecutive elements in the array.
 
     - Solution:
@@ -129,6 +135,38 @@
                 maxSum = Math.max(maxSum, tempSum);
             }
             return maxSum;
+        }
+
+    - Ex_2:
+        Write a function called minSubArrayLen which accepts two parameters - an array of positive integers and a positive integer.
+
+        This function should return the minimal length of a contiguous subarray of which the sum is greater than or equal to the integer passed to the function. If there isn't one, return 0 instead.
+        Examples:
+
+        minSubArrayLen([2,3,1,2,4,3], 7) // 2 -> because [4,3] is the smallest 
+
+    - Solution:
+        function minSubArrayLen(nums, sum) {
+            let total = 0;
+            let minLength = nums.length + 10; 
+            let start = 0;
+            let end = 0;
+
+            while (start < nums.length) {
+                if (total < sum && end < nums.length) {
+                total += nums[end]
+                end ++
+                }
+                else if (total >= sum) {
+                minLength = minLength < (end - start) ? minLength : end - start;
+                total -= nums[start]
+                start ++
+                } 
+                else {
+                break;
+                }
+            }
+            return minLength > nums.length ? 0 : minLength
         }
 
 
