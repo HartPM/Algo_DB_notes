@@ -63,3 +63,10 @@
 //1 + 1 + 1 = 3
 
 
+- Reverse String
+    Write a recursive function called reverse which accepts a string and returns a new string in reverse.
+
+    function reverse(str){
+        if (str.length <= 1) return str;
+        return reverse(str.slice(1)) + str[0];
+    }
