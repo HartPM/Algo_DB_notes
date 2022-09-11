@@ -53,6 +53,3 @@
     naiveSearch("lorie loled", "lol") ==> should return 1
 
 
-
-
-- KMP string searching algorithm
