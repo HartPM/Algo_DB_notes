@@ -13,3 +13,23 @@ function selectionSort(arr){
     }
   return arr
 }
+
+- The code above automatically swaps values at the end of every inner loop. We can make the code more efficient by checking to see if a smaller value was found.
+
+function selectionSort(arr){
+    for (let i = 0; i < arr.length; i++){
+        let min = i;
+        for (let j = i+1; j < arr.length; j++){
+            if(arr[j] < arr[min]) min = j;
+        }
+        if(min !== i){
+            let temp = arr[i];
+            arr[i] = arr[min];
+            arr[min] = temp;
+        }
+    }
+  return arr
+}
+
+- Time complexity O(n^2)
+- The only advantage of selection sort over bubble sort is that there's less space complexity with selection sort because there aren't as many swaps occurring in each loop (at most 1).
