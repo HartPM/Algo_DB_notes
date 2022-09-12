@@ -32,4 +32,5 @@ function selectionSort(arr){
 }
 
 - Time complexity O(n^2)
-- The only advantage of selection sort over bubble sort is that there's less space complexity with selection sort because there aren't as many swaps occurring in each loop (at most 1).
+- The only advantage of selection sort over bubble sort is that there are fewer swaps occurring in each loop (at most 1).
+- For nearly sorted data, Selection Sort is much slower than Bubble Sort or Insertion Sort.
