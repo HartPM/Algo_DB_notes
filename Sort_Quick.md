@@ -39,3 +39,10 @@ function quiSort(arr, left = 0, right = arr.length -1){
     }
     return arr;
 }
+
+
+- Time Complexity:
+    - Worst Case: O(n^2)
+    - Average/ Best: O(n log n)
+
+- Space Complexity: O(log n)
