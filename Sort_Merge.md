@@ -19,13 +19,13 @@ function merge(arr1, arr2){
   }
 
   if(arr1.length !== i){
-    while(i<arr1.length){
+    while(i < arr1.length){
       sortedArr.push(arr1[i])
       i++
     }
   }
     if(arr2.length !== j){
-    while(j<arr2.length){
+    while(j < arr2.length){
       sortedArr.push(arr2[j])
       j++
     }
