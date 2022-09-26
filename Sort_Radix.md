@@ -51,3 +51,11 @@
     nums = [].concat(digitBuckets)              => [[1], [2], [3]]
 
     
+- Time/ Space Complexity
+    - Time: O(nk)
+    - Space: O(n+k)
+
+    - n = length of the array
+    - k = number of digits (average)
+
+    - Due to the way computers store numbers, there is some argument around if Radix Sort is faster than comparison sort given a random distribution of large numbers. Often it is faster but under certain circumstances it may not be.
