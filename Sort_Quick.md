@@ -43,6 +43,7 @@ function quiSort(arr, left = 0, right = arr.length -1){
 
 - Time Complexity:
     - Worst Case: O(n^2)
+        - occurs when data is already sorted or when we pick the min or max value in the array as pivot
     - Average/ Best: O(n log n)
 
 - Space Complexity: O(log n)
