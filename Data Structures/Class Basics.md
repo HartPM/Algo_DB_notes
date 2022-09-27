@@ -1,4 +1,5 @@
 - Class
+    - JS uses prototype inheritance. Classes were added in ES2015 as syntactic sugar. JS is not an Object Oriented language.
 
     class Student{
         constructor(firstName, lastName, year){
