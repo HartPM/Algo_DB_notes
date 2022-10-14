@@ -20,6 +20,7 @@ class Node{
     first.next.next = new Node("How")
     first.next.next.next = new Node("Are")
     first.next.next.next.next = new Node("You")
+    
 
 - Using a class:
 
