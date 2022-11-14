@@ -1,6 +1,6 @@
 - Like an array but without an indexed location. More like a train with cars linked to one another.
 - contains a head, tail, and length property.
-- consist of nodes. Each node contains a value and a pointer to another node or null.
+- consists of nodes. Each node contains a value and a pointer to another node or null.
 - each node only points to the next node. Nodes do not point backwards to the previous node.
 - cannot randomly access a node. Must traverse from the beginning.
 - The benefit is that insertions and deletions are much faster than with an array.
@@ -13,13 +13,13 @@ class Node{
     }
 }
 
-- We can create the linked list without a class (for demo, best to use a class)
+    - We can create the linked list without a class (for demo, best to use a class)
 
-    const first = new Node("Hi")
-    first.next = new Node("There")
-    first.next.next = new Node("How")
-    first.next.next.next = new Node("Are")
-    first.next.next.next.next = new Node("You")
+        const first = new Node("Hi")
+        first.next = new Node("There")
+        first.next.next = new Node("How")
+        first.next.next.next = new Node("Are")
+        first.next.next.next.next = new Node("You")
     
 
 - Using a class:
